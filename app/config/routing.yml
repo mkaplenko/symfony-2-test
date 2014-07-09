@@ -1,0 +1,4 @@
+p_turistic_test:
+    resource: "@PTuristicTestBundle/Resources/config/routing.yml"
+    prefix:   /
+

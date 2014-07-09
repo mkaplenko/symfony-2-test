@@ -1,0 +1,8 @@
+p_turistic_test_homepage:
+#    path:     /hello/{name}
+    path:     /
+    defaults: { _controller: PTuristicTestBundle:Default:index }
+
+p_turistic_test_form:
+    path:     /contact_form/
+    defaults: { _controller: PTuristicTestBundle:Default:contact }
