@@ -27,11 +27,9 @@ class DefaultController extends Controller
             $emailConstraint = new Email();
             $emailConstraint->message = 'Invalid email address';
             $email_error = $this->get('validator')->validateValue($form_data['email'], $emailConstraint);
-            print(count($email_error));
             if(count($email_error)){
                 $errors[] = $email_error[0]->getMessage();
             }
-            print(count($errors));
             if ($form->isValid() and !count($errors)){
 
                 $form_controller->sendMail($form_data, $this->get('mailer'), $this->get('logger'));
